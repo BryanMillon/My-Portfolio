@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from '../components/Header'
 
 
 
@@ -8,10 +9,9 @@ export default function Home() {
       <Head>
         <title>Bryan Millon Portfolio</title>
       </Head>
-      <h1 className="text-red-600">AWESOME PORTFOLIO</h1>
       
       {/* HEADER */}
-
+      <Header/>
       {/* HERO */}
 
       {/* ABOUT */}
