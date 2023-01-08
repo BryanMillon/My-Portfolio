@@ -9,9 +9,9 @@ export default function Home() {
       <Head>
         <title>Bryan Millon Portfolio</title>
       </Head>
-      
-      {/* HEADER */}
+
       <Header/>
+      
       {/* HERO */}
 
       {/* ABOUT */}
