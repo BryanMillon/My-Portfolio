@@ -36,17 +36,17 @@ export default function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          id beatae quam blanditiis eveniet itaque laborum repellendus.
-          Consequuntur, rem? Inventore impedit sint iste quae blanditiis minima
-          mollitia nobis repellat tempore? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Corporis at pariatur ad in architecto
-          ullam corrupti eaque porro, error non officiis quod rem numquam,
-          tempora quisquam quia minima beatae ipsa. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Totam soluta laboriosam beatae cumque
-          exercitationem quaerat pariatur quod expedita ratione, blanditiis
-          laudantium dolor culpa architecto eum odio ullam, neque velit
-          quia!Lorem
+          Hi there! My name is Bryan Millon, I'm a 20-year-old tech enthusiast
+          from Costa Rica. I recently graduated from the Henry Bootcamp's Full
+          Stack Development program and have been programming for a year now.
+          I'm a developer who is passionate about technology, and I'm always
+          looking to stay on top of the latest trends and advancements in the
+          field. Aside from my love for coding, I'm also a big fan of Spider-Man
+          and enjoy listening to music in my free time. I consider myself a
+          curious and dynamic person who is always eager to learn and grow. If
+          you're looking for a Full Stack Developer who's dedicated and
+          committed to being the best and won't back down from a challenge, I'm
+          your guy 🕷️💻🚀
         </p>
       </div>
     </motion.div>
