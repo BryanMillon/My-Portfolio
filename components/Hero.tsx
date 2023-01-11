@@ -2,7 +2,7 @@ import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles';
 import Image from 'next/image'
-import profilePic from  './img/ME.jpg'
+import profilePic from  './img/me.jpg'
 import Link from 'next/link';
 
 type Props = {}

@@ -16,12 +16,12 @@ export default function Home() {
       <Header/>
       
       {/* HERO */}
-  <section id='Hero' className='snap-center'>
+  <section id='Hero' className='snap-start'>
     <Hero/>
   </section>
 
       {/* ABOUT */}
-      <section id='about'>
+      <section id='about' className='snap-center'>
         <About/>
       </section>
 
