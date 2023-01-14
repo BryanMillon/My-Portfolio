@@ -5,7 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
 ],
   theme: {
-    extend: {},
+    extend: {  screens: {
+      'Sm-pc': {'raw': '(max-height: 768px)'},
+      // => @media (max-height: 1234px) { ... }
+    }},
   },
   plugins: [],
 }
