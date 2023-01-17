@@ -22,8 +22,8 @@ export default function ExperienceCard({}: Props) {
           height="0"
         />
       </motion.div>
-      <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-lights">Cad Designer</h4>
+      <div className="text-center sm:text-left px-0 md:px-10">
+        <h4 className="text-3xl sm:text-4xl font-lights">Cad Designer</h4>
         <p className="font-bold text-2xl mt-1">Align Technology</p>
 
         
@@ -37,11 +37,13 @@ export default function ExperienceCard({}: Props) {
          */}
 
         <p className="uppercase py-5 text-gray-300">Sep 2021 - Jan 2022</p>
-        <ul className=" list-disc space-y-4 ml-5 text-lg">
+        <div className="max-w-[275px] max-h-24 overflow-scroll sm:max-w-full md:max-h-full md:overflow-hidden">
+        <ul className=" list-disc space-y-4 ml-5 text-base ">
           <li> Use software to design dental treatments based on the dentist`s specifications</li>
           <li>Set daily goals and work towards achieving them.</li>
           <li>Collaborate with team members and also complete tasks independently.</li>
         </ul>
+        </div>
       </div>
     </article>
   );
