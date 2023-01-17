@@ -6,7 +6,8 @@ module.exports = {
 ],
   theme: {
     extend: {  screens: {
-      'Sm-pc': {'raw': '(max-height: 768px)'},
+      'height-700': {'raw': '(max-height: 800px)'},
+      'height-800': {'raw': '(min-height: 800px)'},
       'mobile-s':'320px',
       'mobile-m':'375px',
       'mobile-l': '475px'
