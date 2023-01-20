@@ -14,7 +14,9 @@ export default function Experience({}: Props) {
        <h3 className=" text-xl absolute top-16 height-800:top-20 uppercase tracking-[20px] text-gray-500 mobile-m:text-2xl  ">
         Experience
       </h3>
-      <div className=' w-full h-[530px] height-800:h-[650px]  flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory'>
+      <div className=' w-full h-[530px] height-800:h-[650px]  flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
+     <ExperienceCard/>
+     <ExperienceCard/>
      <ExperienceCard/>
       </div>
     </motion.div>

@@ -15,6 +15,7 @@ export default function Skill({directionLeft}: Props) {
         }}
         transition={{duration:1}}
         whileInView={{opacity: 1, x:0}}
+        
         src='https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo-500x313.png'
         className='rounded-full border border-gray-500 object-cover w-20 h-20 height-800:w-28 height-800:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
         />
