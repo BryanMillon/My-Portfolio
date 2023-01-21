@@ -18,18 +18,18 @@ export default function Hero({}: Props) {
   });
   
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+    <div className='h-screen flex flex-col space-y-3 mobile-m:space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles/>
       <Image
         src={profilePic}
         alt="Picture of the author"
-        className='relative rounded-full h-36 w-36 mx-auto object-cover'
+        className='relative rounded-full h-28 w-28  mobile-l:h-44 mobile-l:w-44 mobile-m:h-36 mobile-m:w-36 mx-auto object-cover'
       />
       <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
           Full Stack Developer
         </h2>
-      <h1 className=' lg:text-6x1 font-semibold px-10 text-3xl sm:text-5xl'>
+      <h1 className=' lg:text-6x1 font-semibold px-10 text-2xl mobile-m:text-3xl mobile-l:text-4xl sm:text-5xl'>
       <span className='mr-2'>{text}</span>
       <Cursor cursorColor="#F7AB0A"/>
       </h1>
