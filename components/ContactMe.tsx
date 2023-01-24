@@ -14,9 +14,9 @@ type Props = {};
 export default function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
-  // const onSubmit: SubmitHandler<Inputs> = formData => window.location.href = `mailto:bryanmillon31@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+  const onSubmit: SubmitHandler<Inputs> = formData => window.location.href = `mailto:bryanmillon31@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
 
-  const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
+  // const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -84,7 +84,7 @@ export default function ContactMe({}: Props) {
 
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-3 mobile-xl:py-5 px-10 rounded-md text-black font-bold"
+            className="bg-[#F7AB0A] py-3 mobile-xl:py-5 px-10 rounded-md text-black font-bold " 
           >
             Submit
           </button>

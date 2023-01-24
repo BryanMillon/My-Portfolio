@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Link from 'next/link'
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 
 
@@ -51,13 +52,14 @@ export default function Home() {
      <ContactMe/>
      </section>
 
-     {/* <Link href='#Hero'>
+     <Link href='#Hero'>
      <footer className='sticky bottom-5 w-full cursor-pointer' >
       <div className='flex items-center justify-center'>
-        <img className='h-10 w-10 rounded full filter grayscale hover:grayscale-0 cursor-pointer' src="" alt="" />
+      <HomeIcon className="text-[#F7AB0A] h-6 w-6 mobile-l:h-8 mobile-l:w-8 sm:h-10 sm:w-10 animate-pulse" />
+        {/* <img className='h-10 w-10 rounded full filter grayscale hover:grayscale-0 cursor-pointer' src="" alt="" /> */}
       </div>
      </footer>
-     </Link> */}
+     </Link>
 
     </div>
   )
