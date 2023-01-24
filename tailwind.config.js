@@ -11,6 +11,7 @@ module.exports = {
       'h-xs': {'raw': '(min-height: 625px)'},
       'h-s': {'raw': '(min-height: 650px)'},
       'height-800': {'raw': '(min-height: 800px)'},
+      'height-1000': {'raw': '(min-height: 1000px)'},
      
       // => @media (max-height: 1234px) { ... }
     }},

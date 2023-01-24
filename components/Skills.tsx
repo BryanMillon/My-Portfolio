@@ -14,7 +14,7 @@ export default function Skills({}: Props) {
         <h3 className="absolute top-16 height-800:top-20 uppercase tracking-[20px] text-gray-500 text-xl mobile-m:text-2xl ">
         Skills
       </h3>
-      <div className='grid grid-cols-3 mobile-l:grid-cols-4 gap-5'>
+      <div className='grid grid-cols-3 sm:grid-cols-4 gap-3 mobile-m:gap-5'>
       <Skill/>
       <Skill/>
       <Skill/>
