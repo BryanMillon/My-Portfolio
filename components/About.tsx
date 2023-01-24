@@ -16,7 +16,7 @@ export default function About({}: Props) {
   curious and dynamic person who is always eager to learn and grow. If
   you're looking for a Full Stack Developer who's dedicated and
   committed to being the best and won't back down from a challenge, I'm
-  your guy 🕷️💻🚀`
+  your guy 🕷️💻🚀`;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,10 +24,10 @@ export default function About({}: Props) {
       transition={{ duration: 1.5 }}
       className=" flex flex-col relative text-center h-screen md:text-left md:flex-row max-w-7xl mx-auto px-10 justify-evenly items-center"
     >
-      <h3 className="absolute top-16 height-800:top-20 uppercase tracking-[20px] text-gray-500 text-xl mobile-m:text-2xl ">
+      <h3 className="absolute top-16 height-800:top-20 uppercase tracking-[20px] text-gray-500 text-xl mobile-xl:text-2xl ">
         About
       </h3>
-    
+
       <motion.div
         className="relative flex-shrink-0 -mb-20  md:mb-0"
         initial={{ x: -200, opacity: 0 }}
@@ -50,10 +50,9 @@ export default function About({}: Props) {
           background
         </h4>
         <div className="max-w-md max-h-28 pr-2 mobile-m:max-h-40  mobile-xl:max-h-44  md:max-w-full md:max-h-full md:overflow-hidden  overflow-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80  ">
-
-        <p className="text-sm mobile-m:text-base text-center mobile-m:text-left">
-       {text}
-        </p>
+          <p className="text-sm mobile-m:text-base text-center mobile-m:text-left">
+            {text}
+          </p>
         </div>
       </div>
     </motion.div>
