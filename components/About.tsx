@@ -1,5 +1,4 @@
 import React from "react";
-import profilePic from "./img/pic.JPG";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PageInfo } from "../typings";
