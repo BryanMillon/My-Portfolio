@@ -1,6 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from "../typings";
 
 type Inputs = {
   name: string;
@@ -9,9 +10,11 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+type Props = {
+  pageInfo:PageInfo;
+};
 
-export default function ContactMe({}: Props) {
+export default function ContactMe({pageInfo}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = formData => window.location.href = `mailto:bryanmillon31@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
@@ -27,27 +30,27 @@ export default function ContactMe({}: Props) {
       <div className=" max-h-72 overflow-scroll mobile-m:max-h-[420px] mobile-l:max-h-full mobile-l:overflow-hidden flex flex-col space-y-3 height-800:space-y-5  height-1000:space-y-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 pr-3 ">
         <h4 className="text-2xl  mobile-xl:text-3xl sm:text-4xl font-semibold text-center ">
           If you want to work with me.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Let's Talk</span>{" "}
+          <span className="decoration-[#F7AB0A]/50 underline">Let&apos;s Talk</span>{" "}
         </h4>
 
         <div className=" space-y-3 height-800:space-y-5 height-1000:space-y-10">
           <div className="flex items-center space-x-3 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="mobile-xl:text-xl sm:text-2xl ">
-              bryanmillon31@gmail.com
+              {pageInfo.email}
             </p>
           </div>
 
           <div className="flex items-center space-x-3 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="mobile-xl:text-xl sm:text-2xl ">
-              Costa Rica, San Jose
+              {pageInfo.address}
             </p>
           </div>
         </div>
         <div className=" flex items-center space-x-3  justify-center">
           <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-          <p className=" mobile-xl:text-xl sm:text-2xl ">+506 83637692</p>
+          <p className=" mobile-xl:text-xl sm:text-2xl ">{pageInfo.phoneNumber}</p>
         </div>
 
         <form

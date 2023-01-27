@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { urlFor } from "../sanity";
+import { Project } from "../typings";
 
-type Props = {};
+type Props = {
+  projects: Project[]
+};
 
-export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+export default function Projects({projects}: Props) {
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +23,7 @@ export default function Projects({}: Props) {
         {/* projects */}
         {projects.map((project, i) => (
           <div
-            key={project}
+            key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 sm:p-20 md:p-28 h-screen"
           >
             <motion.img
@@ -27,7 +31,7 @@ export default function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://media.licdn.com/dms/image/C4E2DAQHhbvKDkT_wGA/profile-treasury-image-shrink_800_800/0/1670200832119?e=1674608400&v=beta&t=R1l20CQPJ9yEdDv8NZRtjXHQsLYB8CbcBI-9sT59TQI"
+              src={urlFor(project?.image).url()}
               alt="country"
               className=" h-28 mobile-m:h-36 sm:h-56 height-800:h-40 height-1000:h-auto"
             />
@@ -36,18 +40,17 @@ export default function Projects({}: Props) {
                 {i + 1} of {projects.length}:
                 <span className="underline decoration-[#F7AB0A]/50">
                   {" "}
-                  Country Finder
+                  {project.title}
                 </span>
               </h4>
+
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology=>(
+                  <img key={technology._id} src={urlFor(technology?.image).url()} className="h-10 w-10"/>
+                )))}
+              </div>
               <p className="max-h-28 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-full pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-lg text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80  ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                veritatis nulla exercitationem obcaecati, accusantium magnam
-                suscipit sequi aperiam. Nemo quaerat obcaecati dolorem atque
-                aperiam consequuntur sed inventore eum beatae exercitationem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto itaque, autem, voluptates cum voluptatibus ut
-                asperiores unde necessitatibus aliquam earum qui temporibus
-                tenetur libero modi culpa atque provident neque sequi?
+              {project.summary}
               </p>
             </div>
           </div>
