@@ -8,7 +8,7 @@ import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Link from 'next/link'
 import { HomeIcon } from "@heroicons/react/24/solid";
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import { ScriptProps } from 'next/script'
 import {  Experience as ExperienceType, PageInfo, Project, Skill, Social } from '../typings'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
@@ -27,7 +27,7 @@ type Props = {
 
 export default function Home({pageInfo, experiences, projects, skills, socials}: Props) {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
+    <div className='bg-[#141418] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80'>
       <Head>
         <title>Bryan Millon Portfolio</title>
       </Head>
@@ -69,7 +69,7 @@ export default function Home({pageInfo, experiences, projects, skills, socials}:
      <Link href='#Hero'>
      <footer className='sticky bottom-5 w-full cursor-pointer' >
       <div className='flex items-center justify-center'>
-      <HomeIcon className="text-[#F7AB0A] h-6 w-6 mobile-l:h-8 mobile-l:w-8 sm:h-10 sm:w-10 animate-pulse" />
+      <HomeIcon className="text-[#EFBE0A] h-6 w-6 mobile-l:h-8 mobile-l:w-8 sm:h-10 sm:w-10 animate-pulse" />
         {/* <img className='h-10 w-10 rounded full filter grayscale hover:grayscale-0 cursor-pointer' src="" alt="" /> */}
       </div>
      </footer>
@@ -79,7 +79,7 @@ export default function Home({pageInfo, experiences, projects, skills, socials}:
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetServerSideProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: ExperienceType[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();

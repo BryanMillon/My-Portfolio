@@ -32,8 +32,7 @@ export default function Projects({projects}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
-              alt="country"
-              className=" h-28 mobile-m:h-36 sm:h-56 height-800:h-40 height-1000:h-auto"
+              className=" h-28 mobile-m:h-36 sm:h-56 height-800:h-40 height-1000:h-96"
             />
             <div className="space-y-2  mobile-xl:space-y-7 px-0 md:px-10 max-w-6xl ">
               <h4 className="text-2xl mobile-l:text-4xl font-semibold text-center">
@@ -49,14 +48,14 @@ export default function Projects({projects}: Props) {
                   <img key={technology._id} src={urlFor(technology?.image).url()} className="h-10 w-10"/>
                 )))}
               </div>
-              <p className="max-h-28 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-full pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-lg text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80  ">
+              <p className="max-h-28 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-full pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-xl text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80  ">
               {project.summary}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/30 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 }
