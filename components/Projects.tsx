@@ -32,23 +32,23 @@ export default function Projects({projects}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
-              className=" h-28 mobile-m:h-36 sm:h-56 height-800:h-40 height-1000:h-96"
+              className=" h-28 mobile-m:h-32 sm:h-48 height-800:h-36 height-1000:h-64 object-cover"
             />
             <div className="space-y-2  mobile-xl:space-y-7 px-0 md:px-10 max-w-6xl ">
-              <h4 className="text-2xl mobile-l:text-4xl font-semibold text-center">
+              <h4 className="text-xl mobile-m:text-2xl mobile-l:text-4xl font-semibold text-center">
                 {i + 1} of {projects.length}:
-                <span className="underline decoration-[#F7AB0A]/50">
+                <a href={project?.linkToGit} className="underline decoration-[#F7AB0A]/50 animate-pulse hover:text-[#F7AB0A] hover:decoration-transparent">
                   {" "}
-                  {project.title}
-                </span>
+                  {project?.title}
+                </a>
               </h4>
 
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology=>(
-                  <img key={technology._id} src={urlFor(technology?.image).url()} className="h-10 w-10"/>
+                  <img key={technology._id} src={urlFor(technology?.image).url()} className=" h-5 w-5 mobile-m:h-6 mobile-m:w-6 mobile-xl:w-8 mobile-xl:h-8 height-1000:h-12 height-1000:w-12"/>
                 )))}
               </div>
-              <p className="max-h-28 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-full pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-xl text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80  ">
+              <p className="max-h-24 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-28 pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-xl text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80  ">
               {project.summary}
               </p>
             </div>

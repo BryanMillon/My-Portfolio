@@ -2,6 +2,7 @@ import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { PageInfo } from "../typings";
+import { useRouter } from 'next/router';
 
 type Inputs = {
   name: string;
@@ -21,6 +22,17 @@ export default function ContactMe({pageInfo}: Props) {
 
   // const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
 
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('https://walink.co/581e3b');
+  };
+
+  
+  const handleClick2 = () => {
+    router.push('mailto: bryanmillon31@gmail.com');
+  };
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-16 height-800:top-20 uppercase tracking-[20px] text-gray-500 text-xl mobile-xl:text-2xl ">
@@ -34,7 +46,7 @@ export default function ContactMe({pageInfo}: Props) {
         </h4>
 
         <div className=" space-y-3 height-800:space-y-5 height-1000:space-y-10">
-          <div className="flex items-center space-x-3 justify-center">
+          <div onClick={handleClick2} className=" cursor-pointer flex items-center space-x-3 justify-center hover:text-[#F7AB0A]">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="mobile-xl:text-xl sm:text-2xl ">
               {pageInfo.email}
@@ -48,8 +60,9 @@ export default function ContactMe({pageInfo}: Props) {
             </p>
           </div>
         </div>
-        <div className=" flex items-center space-x-3  justify-center">
-          <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+        
+        <div onClick={handleClick} className="cursor-pointer flex items-center space-x-3  justify-center hover:text-[#F7AB0A]">
+          <PhoneIcon  className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
           <p className=" mobile-xl:text-xl sm:text-2xl ">{pageInfo.phoneNumber}</p>
         </div>
 
