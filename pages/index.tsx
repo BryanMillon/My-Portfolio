@@ -8,7 +8,7 @@ import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Link from 'next/link'
 import { HomeIcon } from "@heroicons/react/24/solid";
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetStaticProps } from 'next'
 import { ScriptProps } from 'next/script'
 import {  Experience as ExperienceType, PageInfo, Project, Skill, Social } from '../typings'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
@@ -79,7 +79,7 @@ export default function Home({pageInfo, experiences, projects, skills, socials}:
   )
 }
 
-export const getStaticProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: ExperienceType[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
