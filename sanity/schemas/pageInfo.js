@@ -58,5 +58,10 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'social'}}],
     },
+    {
+      name:'file',
+      title:'File',
+      type:'file'
+    }
   ],
 })
