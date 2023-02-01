@@ -40,10 +40,10 @@ export default function Projects({projects}: Props) {
               <h4 className="text-xl mobile-m:text-2xl mobile-l:text-4xl font-semibold text-center">
                 {i + 1} of {projects.length}:
                 <a href={project?.linkToGit} className=" text-[#F7AB0A] animate-pulse hover:text-[#F7AB0A]/50 hover:animate-none hover:decoration-transparent">
-                  {" "}{project?.title }
+                 {" "} {project?.title }
+                <LinkIcon className="inline-block text-[#F7AB0A] h-3 w-3 mb-1 ml-1 mobile-l:h-6 mobile-l:w-6  text-center"/>
                 </a>
-                
-              </h4>
+              </h4> 
                   
                    
 
