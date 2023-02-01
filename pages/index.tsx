@@ -27,7 +27,7 @@ type Props = {
 
 export default function Home({pageInfo, experiences, projects, skills, socials}: Props) {
   return (
-    <div className='bg-[#141418] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80'>
+    <div className='bg-[#141418] text-white h-screen snap-y snap-mandatory overflow-y-scroll !scroll-smooth overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80'>
       <Head>
         <title>Bryan Millon Portfolio</title>
       </Head>
@@ -66,14 +66,14 @@ export default function Home({pageInfo, experiences, projects, skills, socials}:
      <ContactMe pageInfo={pageInfo}/>
      </section>
 
-     <Link href='#Hero'>
-     <footer className='sticky bottom-5 w-full cursor-pointer' >
+     <footer className='sticky bottom-14 sm:bottom-5 height-1000:bottom-16 w-full' >
       <div className='flex items-center justify-center'>
-      <HomeIcon className="text-[#EFBE0A] h-6 w-6 mobile-l:h-8 mobile-l:w-8 sm:h-10 sm:w-10 animate-pulse" />
+     <Link href='#Hero'>
+      <HomeIcon className="text-[#EFBE0A] h-6 w-6 mobile-l:h-8 mobile-l:w-8 sm:h-10 sm:w-10 animate-pulse  cursor-pointer" />
         {/* <img className='h-10 w-10 rounded full filter grayscale hover:grayscale-0 cursor-pointer' src="" alt="" /> */}
+     </Link>
       </div>
      </footer>
-     </Link>
 
     </div>
   )

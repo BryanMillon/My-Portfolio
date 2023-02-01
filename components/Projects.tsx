@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import { urlFor } from "../sanity";
 import { Project } from "../typings";
@@ -45,10 +46,10 @@ export default function Projects({projects}: Props) {
 
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology=>(
-                  <img key={technology._id} src={urlFor(technology?.image).url()} className=" h-5 w-5 mobile-m:h-6 mobile-m:w-6 mobile-xl:w-8 mobile-xl:h-8 height-1000:h-12 height-1000:w-12"/>
+                  <Image width="500" height="500" alt="logo" key={technology._id} src={urlFor(technology?.image).url()} className=" h-5 w-5 mobile-m:h-6 mobile-m:w-6 mobile-xl:w-8 mobile-xl:h-8 height-1000:h-12 height-1000:w-12"/>
                 )))}
               </div>
-              <p className="max-h-24 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-28 pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-xl text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E10430]/80  ">
+              <p className="max-h-24 mobile-m:max-h-52 mobile-xl:max-h-64 sm:max-h-28 pr-3 overflow-scroll text-sm mobile-m:text-base mobile-l:text-xl text-center md:text-left scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80  ">
               {project.summary}
               </p>
             </div>
