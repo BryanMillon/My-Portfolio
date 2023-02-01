@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { urlFor } from "../sanity";
 import { Project } from "../typings";
+import { LinkIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   projects: Project[]
@@ -38,11 +39,13 @@ export default function Projects({projects}: Props) {
             <div className="space-y-2  mobile-xl:space-y-7 px-0 md:px-10 max-w-6xl ">
               <h4 className="text-xl mobile-m:text-2xl mobile-l:text-4xl font-semibold text-center">
                 {i + 1} of {projects.length}:
-                <a href={project?.linkToGit} className="underline decoration-[#F7AB0A]/50 animate-pulse hover:text-[#F7AB0A] hover:decoration-transparent">
-                  {" "}
-                  {project?.title}
+                <a href={project?.linkToGit} className=" text-[#F7AB0A] animate-pulse hover:text-[#F7AB0A]/50 hover:animate-none hover:decoration-transparent">
+                  {" "}{project?.title }
                 </a>
+                
               </h4>
+                  
+                   
 
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology=>(
